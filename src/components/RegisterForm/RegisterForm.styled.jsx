@@ -6,11 +6,9 @@ export const Register = styled.div`
 `;
 
 export const RegisterWrapper = styled.div`
-  // width: 60%;
   height: 70%;
   display: flex;
   flex-direction: column;
-  /* gap: 50px; */
   justify-content: center;
 `;
 

@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 export const HomeTitle = styled.h2`
   text-align: center;
-  font-size: 44px;
+  font-size: 54px;
   color: #127149;
 `;
 const HomeImage = styled.img`
