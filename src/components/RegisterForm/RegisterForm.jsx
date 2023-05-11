@@ -44,13 +44,6 @@ const RegisterForm = () => {
     }
   };
 
-  const clearForm = () => {
-    setNickname('');
-    setEmail('');
-    setPassword('');
-    setSecondPassword('');
-  };
-
   const handleSubmit = event => {
     event.preventDefault();
 

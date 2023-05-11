@@ -33,11 +33,6 @@ const LoginForm = () => {
     }
   };
 
-  const clearForm = () => {
-    setEmail('');
-    setPassword('');
-  };
-
   const handleSubmit = event => {
     event.preventDefault();
 
