@@ -61,8 +61,6 @@ const RegisterForm = () => {
         password,
       })
     );
-
-    clearForm();
   };
 
   return (
@@ -81,13 +79,16 @@ const RegisterForm = () => {
               <RegisterInput
                 type="text"
                 placeholder="Nickname"
+                required
                 name="nickname"
                 value={nickname}
                 onChange={handleInputChange}
               />
 
               <RegisterInput
-                type="text"
+                type="email"
+                // pattern="email"
+                required
                 placeholder="Email"
                 name="email"
                 value={email}
@@ -96,8 +97,10 @@ const RegisterForm = () => {
 
               <RegisterInput
                 type="password"
-                placeholder="Password"
+                placeholder="Password (min 7 symbols)"
+                required
                 name="password"
+                pattern='(.){7,}'
                 value={password}
                 onChange={handleInputChange}
               />
@@ -105,6 +108,9 @@ const RegisterForm = () => {
               <RegisterInput
                 type="password"
                 placeholder="Password again"
+                required
+                minlength="7"
+                pattern='(.){7,}'
                 name="secondPassword"
                 value={secondPassword}
                 onChange={handleInputChange}

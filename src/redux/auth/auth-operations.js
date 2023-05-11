@@ -23,6 +23,7 @@ export const register = createAsyncThunk(
 
       return data;
     } catch (error) {
+      console.log("Something wrong");
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -38,6 +39,7 @@ export const logIn = createAsyncThunk(
 
       return data;
     } catch (error) {
+      alert("Password or login is incorect")
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -69,6 +71,7 @@ export const refreshCurrentUser = createAsyncThunk(
       const { data } = await axios.get('/users/current');
       return data;
     } catch (error) {
+      console.log(error);
       thunkAPI.rejectWithValue(error.message);
     }
   }

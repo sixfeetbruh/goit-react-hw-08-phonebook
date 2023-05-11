@@ -42,8 +42,6 @@ const LoginForm = () => {
     event.preventDefault();
 
     dispatch(logIn({ email, password }));
-
-    clearForm();
   };
 
   return (

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
 import ScrollToTop from 'units/scrollToTop';
 import { refreshCurrentUser } from 'redux/auth/auth-operations';
@@ -63,6 +63,7 @@ const App = () => {
                 }
               />
             </Route>
+            <Route path='*' element={<Navigate to='/' />} />
           </Routes>
         </Suspense>
       )}
